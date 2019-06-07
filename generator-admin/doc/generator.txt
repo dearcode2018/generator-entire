@@ -1,0 +1,65 @@
+
+
+
+模板变量
+%s: 文件名前缀
+${g.codePackage}: 包名
+${g.name}: 文件备注/描述
+${g.author}: 作者
+${g.date}: 日期时间
+${g.tableName}: 表名
+${field.fieldName}: 列名
+${g.entityName}: 实体名
+${field.comment}: 字段备注
+${field.chinaName}: 中文名，一般不用
+${field.type}: 字段类型
+${field.name}: 字段名
+
+# 控制层路径/变量名，第一个字母小写
+${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}
+
+# 转小写
+${strutil.toLowerCase(g.entityName)}
+
+
+# 实体示例:
+<%for(field in t.fields){%>
+     /**
+     * ${field.chinaName}
+     * ${field.comment}
+     */
+
+	private ${field.type} ${field.name};
+
+<%}%>
+
+
+1.修改登录密码
+将admin的密码修改为admin
+1) 执行ShiroKit.md5("admin", "8pgby")生成密码
+修改gen.sql INSERT INTO `t_system_user` 对应的admin
+并且修改数据库对应的记录
+2) 将密码长度限制降低
+修改view/login.html 将长度修改为 4.
+
+2.修改源码
+将${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}
+在程序中处理后存储到一个新变量，避免这个太长容易编写出错.
+
+3.修改头像
+登录之后，左上角的头像
+路径: static/img/girl.gif
+
+
+
+
+
+
+
+
+
+
+
+
+
+

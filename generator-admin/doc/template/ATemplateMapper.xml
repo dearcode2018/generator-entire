@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- ${g.name} -->
+<mapper namespace="${g.codePackage}.mapper.local.${g.entityName}Mapper">
+
+	<!-- 表名称 -->
+	<sql id="tableName">${g.tableName}</sql>
+
+		<resultMap id="BaseResultMap" type="${g.codePackage}.model.${g.entityName}Model">
+		<%for(field in t.fields){%>
+		    <result column="${field.fieldName}" property="${field.name}" />
+		<%}%>
+	</resultMap>
+
+</mapper>

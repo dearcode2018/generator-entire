@@ -1,0 +1,45 @@
+运行环境
+
+备忘
+1) 首页的介绍，在dist/xx/static/js/9.js 文件中，可以修改
+
+1.开发环境
+1) 导入 renren-fast 和 renren-generator工程
+2) 启动本地数据库mysql，并导入db/myql.sql
+3) 运行renren-fast SpringBoot工程
+4) 构建运行前端renren-fast-vue: 
+npm install -> 修改配置 config/index.js
+将target: 'http://demo.renren.io/renren-fast/', 修改为	
+target: 'http://127.0.0.1:8080/renren-fast',
+5) 用npm容器来运行 npm run dev
+6) 访问 http://127.0.0.1:8081
+admin/admin
+
+
+
+2.正式环境
+修改renren-fast工程的application-prod.yml，设置生产环境配置
+打包mnv clean pakcage
+导入sql脚本
+运行 jar -Dspring.profiles.active=prod -jar renren-fast.jar
+
+打包前端
+npm run build --prod
+将打包后的dist目录拷贝到 nginx/httpd/tomcat等容器适当的位置
+配置指向dist作为根目录
+启动容器，访问 http://ip:8081 admin/admin
+
+
+
+使用指导
+1) 运行renren-generator，访问http://127.0.0.1:7070/#generator.html
+选择要生成的表，点击生成代码
+3) 导入SQL
+导入角色菜单脚本
+4) 拷贝后端代码 - renren-fast
+java代码拷贝到 io.renren.modules 包下，main/resources/mapper/*放到resources/mapper下
+5) 拷贝前端代码 - renren-fast-vue
+将main/resources/src/views/* 拷贝到renren-fast-vue/src/views 目录下
+8) 启动
+启动服务端: renren-fast
+启动前端: renren-fast-vue (npm run dev)
