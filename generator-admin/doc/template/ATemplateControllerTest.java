@@ -37,7 +37,7 @@ public final class ${g.entityName}ControllerTest extends BaseControllerTest {
 	
 	/* 注入对象的调用方式 */
 	@Resource
-	private ${g.entityName}Controller ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Controller;
+	private ${g.entityName}Controller ${g.lowerEntityName}Controller;
 	
 	/**
 	 * 

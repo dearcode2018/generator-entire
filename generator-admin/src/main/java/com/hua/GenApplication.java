@@ -1,5 +1,6 @@
 package com.hua;
 
+import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +24,7 @@ public class GenApplication
      * @author qianye.zheng
      */
     public static void main(String[] args) {
-    	
+    	LogManager l = null;
         SpringApplication.run(GenApplication.class, args);
         logger.info("Lemur Gen Application is success!");
     }

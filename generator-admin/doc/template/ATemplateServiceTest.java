@@ -35,7 +35,7 @@ import ${g.codePackage}.service.local.${g.entityName}Service;
 public final class ${g.entityName}ServiceTest extends BaseServiceTest {
 
 	@Resource
-	private ${g.entityName}Service ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service;
+	private ${g.entityName}Service ${g.lowerEntityName}Service;
 	
 	/**
 	 * 

@@ -32,7 +32,7 @@ public class ${g.entityName}Service extends CoreService
 {
 	
 	@Resource
-	private ${g.entityName}Dao ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Dao;
+	private ${g.entityName}Dao ${g.lowerEntityName}Dao;
 	
 	/**
 	 * 

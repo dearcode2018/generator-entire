@@ -36,7 +36,7 @@ import ${g.codePackage}.dao.local.${g.entityName}Dao;
 public class ${g.entityName}DaoTest extends BaseDaoTest {
 
 		@Resource
-		private ${g.entityName}Dao ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Dao;
+		private ${g.entityName}Dao ${g.lowerEntityName}Dao;
 	
 	//@Resource
 	

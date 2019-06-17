@@ -34,12 +34,12 @@ import ${g.codePackage}.constant.MessageCode;
  * @author ${g.author}
  */
 @Controller
-@RequestMapping("/${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}")
+@RequestMapping("/${g.lowerEntityName}")
 public class ${g.entityName}Controller extends BaseController
 {
 
 	@Resource
-	private ${g.entityName}Service ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service;
+	private ${g.entityName}Service ${g.lowerEntityName}Service;
 	
 	/**
 	 * 
@@ -69,7 +69,7 @@ public class ${g.entityName}Controller extends BaseController
 		// 获取用户登录信息
 		final LoginUserVo loginUserVo = getUser(request);
 		
-		return ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service.add(baseRequest, loginUserVo);
+		return ${g.lowerEntityName}Service.add(baseRequest, loginUserVo);
 	}
 	
 	/**
@@ -100,7 +100,7 @@ public class ${g.entityName}Controller extends BaseController
 		// 获取用户登录信息
 		final LoginUserVo loginUserVo = getUser(request);
 		
-		return ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service.delete(id, loginUserVo);
+		return ${g.lowerEntityName}Service.delete(id, loginUserVo);
 	}
 	
 	/**
@@ -131,7 +131,7 @@ public class ${g.entityName}Controller extends BaseController
 		// 获取用户登录信息
 		final LoginUserVo loginUserVo = getUser(request);
 		
-		return ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service.update(baseRequest, loginUserVo);
+		return ${g.lowerEntityName}Service.update(baseRequest, loginUserVo);
 	}
 	
 	/**
@@ -162,7 +162,7 @@ public class ${g.entityName}Controller extends BaseController
 		// 获取用户登录信息
 		final LoginUserVo loginUserVo = getUser(request);
 		
-		return ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service.get(id);
+		return ${g.lowerEntityName}Service.get(id);
 	}
 	
 	/**
@@ -194,7 +194,7 @@ public class ${g.entityName}Controller extends BaseController
 		// 获取用户登录信息
 		final LoginUserVo loginUserVo = getUser(request);
 		
-		return ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Service.search(searchBean);
+		return ${g.lowerEntityName}Service.search(searchBean);
 	}
 	
 	

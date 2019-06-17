@@ -27,7 +27,7 @@ public class ${g.entityName}Dao extends CoreDao<${g.entityName}Entity>
 {
 	
 	@Resource
-	private ${g.entityName}Mapper ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Mapper;
+	private ${g.entityName}Mapper ${g.lowerEntityName}Mapper;
 	
 	/**
 	 * 

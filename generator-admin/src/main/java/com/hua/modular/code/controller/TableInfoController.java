@@ -177,7 +177,7 @@ public class TableInfoController extends BaseController {
     public Object sqlImport(String dbType, String sql) {
         //sql = HtmlUtils.htmlUnescape(sql);
         sql = handlerFileEncode(sql);
-        Map<String, String> map = new HashMap<String, String>();
+        Map<String, String> map = new HashMap<>();
         map.put("dbType", dbType);
         map.put("sql", sql);
         sqlTableConvertServer.importBean(JSON.toJSONString(map), ShiroKit.getUser().getId());

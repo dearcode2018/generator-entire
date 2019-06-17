@@ -42,9 +42,11 @@ ${strutil.toLowerCase(g.entityName)}
 2) 将密码长度限制降低
 修改view/login.html 将长度修改为 4.
 
-2.修改源码
+2.变量太长问题
 将${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}
 在程序中处理后存储到一个新变量，避免这个太长容易编写出错.
+解决方案，无需修改源码，直接用com.hua.core.model.GenerationEntity.lowerEntityName
+属性即可。${g.lowerEntityName}
 
 3.修改头像
 登录之后，左上角的头像

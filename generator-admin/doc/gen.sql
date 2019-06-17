@@ -360,7 +360,7 @@ CREATE TABLE `t_code_table_field_dbinfo`  (
   `field_default` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '字段默认值',
   `field_content` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT ' 字段注释',
   `field_length` int(11) NULL DEFAULT NULL COMMENT '字段长度',
-  `field_type` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '字段类型',
+  `field_type` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '字段类型',
   `field_point_length` int(11) NULL DEFAULT NULL COMMENT '小数点位数',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `un_field_id`(`field_id`) USING BTREE COMMENT '字段 Id'
@@ -1926,7 +1926,7 @@ CREATE TABLE `t_system_user`  (
 -- Records of t_system_user
 -- ----------------------------
 /* 修改admin的密码为admin */
-INSERT INTO `t_system_user` VALUES (1, 'bebd7b1e-dd86-4515-9e5c-31e0dbd65cad.jpg', 'admin', '6ab1f386d715cfb6be85de941d438b02', '8pgby', 'Lemur', '2017-05-05 00:00:00', 1, 'sn93@qq.com', '18200000000', '1', 27, 1, '2016-01-29 08:49:53', 25);
+INSERT INTO `t_system_user` VALUES (1, 'bebd7b1e-dd86-4515-9e5c-31e0dbd65cad.jpg', 'admin', '6ab1f386d715cfb6be85de941d438b02', '8pgby', 'Administrator', '2017-05-05 00:00:00', 1, 'sn93@qq.com', '18200000000', '1', 27, 1, '2016-01-29 08:49:53', 25);
 INSERT INTO `t_system_user` VALUES (76, NULL, '15563766882', '3ff0a7e5f4e7b6c33bdc4b42ac8c4d20', '2xmvf', '15563766882', '2017-09-14 17:13:54', 1, NULL, NULL, '6', NULL, 1, '2017-09-14 17:13:54', NULL);
 INSERT INTO `t_system_user` VALUES (77, NULL, '13112345678', '4614e94ba9936411d270c71a93a6d666', '6aklv', '测试', NULL, NULL, '', '', NULL, 25, 1, '2017-09-15 11:00:25', NULL);
 INSERT INTO `t_system_user` VALUES (78, NULL, '13560220977', 'b4f109d8c45d3b94d8e255cf0586b93d', 'sp13x', '13560220977', '2017-10-06 13:56:50', 1, NULL, NULL, '6', NULL, 1, '2017-10-06 13:56:50', NULL);

@@ -35,7 +35,7 @@ public class TableServiceConfigServiceImpl implements ITableServiceConfigService
     @Override
     public Integer deleteById(Integer id) {
         // 删除旧数据
-        Map<String, Object> temp = new HashMap<String, Object>();
+        Map<String, Object> temp = new HashMap<>();
         temp.put("table_id", id);
         return tableServiceConfigDao.deleteByMap(temp);
     }

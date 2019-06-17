@@ -33,7 +33,7 @@ import com.baomidou.mybatisplus.core.toolkit.GlobalConfigUtils;
         @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class, BoundSql.class})})
 public class DbTypeInterceptor implements Interceptor {
 
-    private static String TYPE = "";
+    private static String TYPE = "MYSQL";
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
@@ -46,7 +46,7 @@ public class DbTypeInterceptor implements Interceptor {
                 MappedStatement ms = (MappedStatement) parameterObject;
                 //TYPE = GlobalConfigUtils.getGlobalConfig(ms.getConfiguration()).getDbType().getDb().toUpperCase();
             } else if (parameterObject instanceof Map) {//如果是map，有两种情况：（1）使用@Param多参数传入，由Mybatis包装成map。（2）原始传入Map
-                Map map = (Map) parameterObject;
+                Map<String, String> map = (Map<String, String>) parameterObject;
                 map.put("_databaseType",TYPE);
             }
         }

@@ -24,7 +24,8 @@
         <result column="dict_name" property="dictName"/>
         <result column="dict_type" property="dictType"/>
     </resultMap>
-    <insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+    <!-- keyProperty 需要指明哪个参数的字段，这里指明列表中对象的字段即可 -->
+    <insert id="batchInsert" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="list.id">
         <if test="_databaseType == 'MYSQL'">
             INSERT INTO t_code_table_field (table_id, field_name, name, content, type, is_key, is_null, is_show_add, is_show_edit,
             is_show_detail, is_show_list, is_import, is_export, is_query, query_mode, show_type, order_num, dict_name, dict_type)

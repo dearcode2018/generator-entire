@@ -37,7 +37,7 @@ import ${g.codePackage}.mapper.local.${g.entityName}Mapper;
 public class ${g.entityName}MapperTest extends BaseMapperTest {
 
 	@Resource
-	private ${g.entityName}Mapper ${strutil.toLowerCase(strutil.subStringTo(g.entityName,0,1))}${strutil.subString(g.entityName,1)}Mapper;
+	private ${g.entityName}Mapper ${g.lowerEntityName}Mapper;
 
 	/**
 	 * 

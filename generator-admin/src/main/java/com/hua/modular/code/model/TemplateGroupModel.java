@@ -45,7 +45,7 @@ public class TemplateGroupModel extends CodeBaseModel<TemplateGroupModel> {
     /**
      * 描述
      */
-    @TableField(value = "desc")
+    @TableField(value = "`desc`")
     private String desc;
 
     /**
