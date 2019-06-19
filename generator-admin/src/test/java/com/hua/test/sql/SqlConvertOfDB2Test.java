@@ -1,9 +1,9 @@
-package com.hua.core.db.convert.sql.impl;
+package com.hua.test.sql;
 
-import com.hua.core.model.GenBeanEntity;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import com.hua.core.db.convert.sql.impl.SqlConvertOfDB2;
+import com.hua.core.model.GenBeanEntity;
 
 public class SqlConvertOfDB2Test {
     private  String sql = "Create table ods.XD_BAIDUXD_LOAN_RATE (  \n" +

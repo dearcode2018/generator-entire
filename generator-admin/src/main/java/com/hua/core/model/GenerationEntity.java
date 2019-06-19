@@ -21,52 +21,65 @@ public class GenerationEntity implements Serializable {
      * Java包名
      */
     private String codePackage;
+    
     /**
      * html包名,如果为空,使用codePackage
+     * 
      */
     private String htmlPackage;
+    
     /**
      * js包名,如果为空,使用codePackage
      */
     private String jsPackage;
+    
     /**
      * xml包名,如果为空,使用codePackage
      */
     private String xmlPackage;
+    
     /**
      * 功能名称
      */
     private String name;
+    
     /**
      * 数据库表名
      */
     private String tableName;
+    
     /**
      * 主键名称
      */
     private String idName = "id";
+    
     /**
      * 主键类型
      */
     private GenerationType idType = GenerationType.IDENTITY;
+    
     /**
      * 类名,不填使用表名
      */
     private String entityName;
+    
     /**
      * 首字母小写类名
      */
     private String lowerEntityName;
+    
     /**
      * 生成时间
      **/
     private String date;
+    
     /**
      * 作者
      **/
     private String author;
+    
     /**
-     * 作者
+     * 版权
      **/
     private String copyright;
 

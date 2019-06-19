@@ -1,9 +1,9 @@
-package com.hua.core.db.convert.sql.impl;
+package com.hua.test.sql;
 
-import com.hua.core.model.GenBeanEntity;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import com.hua.core.db.convert.sql.impl.SqlConvertOfOracle;
+import com.hua.core.model.GenBeanEntity;
 
 public class SqlConvertOfOracleTest {
 

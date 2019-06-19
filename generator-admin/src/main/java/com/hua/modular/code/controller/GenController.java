@@ -229,7 +229,7 @@ public class GenController {
             res.setHeader("Content-Disposition", "attachment;filename=GEN_" + ge.getEntityName() + ".zip");
             out = new ZipOutputStream(res.getOutputStream());
             for (int i = 0; i < fileList.size(); i++) {
-                out.putNextEntry(new ZipEntry(getPackagePath(templateList.get(i), ge) + File.separator + getFileName(templateList.get(i), ge)));
+                out.putNextEntry(new ZipEntry(templateList.get(i).getLocalPath() + "/" + getPackagePath(templateList.get(i), ge) + File.separator + getFileName(templateList.get(i), ge)));
                 out.write(fileList.get(i).getBytes(), 0, fileList.get(i).getBytes().length);
                 out.closeEntry();
             }

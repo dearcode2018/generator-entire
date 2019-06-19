@@ -58,6 +58,13 @@ public class TemplateModel extends CodeBaseModel<TemplateModel> {
     private String fileName;
     /**
      * 本地路径
+     * 该字段用来决定文件的在工程中的相对位置
+     * 例如 src/main/java 
+     * src/main/resoruces
+     * src/test/java
+     * src/test/resources
+     * src/main/resources/static
+     * src/main/resources/META-INF
      */
     @TableField(value = "local_path")
     private String localPath;

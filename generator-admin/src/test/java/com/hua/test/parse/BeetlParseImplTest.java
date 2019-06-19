@@ -11,27 +11,28 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.hua.core.parse.impl;
-
-import org.junit.Test;
+package com.hua.test.parse;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Test;
+
 import com.hua.core.model.GenBeanEntity;
 import com.hua.core.model.GenerationEntity;
 import com.hua.core.parse.IParse;
+import com.hua.core.parse.impl.BeetlParseImpl;
 
 /**
  *
  * @author JueYue
  * 2017年4月18日
  */
-public class FreemakParseImplTest {
+public class BeetlParseImplTest {
 
     @Test
     public void testParse() {
-        IParse parse = new FreeMarkerParseImpl();
+        IParse parse = new BeetlParseImpl();
         GenerationEntity generationEntity = new GenerationEntity();
         generationEntity.setEntityName("小明");
         GenBeanEntity tableEntity = new GenBeanEntity();

@@ -41,11 +41,20 @@ public class SqlConvertOfMysql implements ISqlConvert {
         bean.setTableName(tableName);
         bean.setName(NameUtil.getEntityHumpName(bean.getTableName()));
         String[] columns = sql.substring(sql.indexOf("(") + 1, sql.lastIndexOf(")")).split("\n");
-        List<GenFieldEntity> fields = new ArrayList<GenFieldEntity>(columns.length);
+        List<GenFieldEntity> fields = new ArrayList<>(columns.length);
         GenFieldEntity field;
         for (int i = 0; i < columns.length; i++) {
             if (StringUtils.isBlank(columns[i])) {
                 continue;
+            }
+            /*
+             * 忽略主键、约束等非字段声明，能包含绝大多数情况
+             * 其他情况，需要导入的SQL只包含字段声明而没有主键、约束等声明
+             */
+            if (columns[i].contains("PRIMARY KEY"))
+            {
+            	// 结束
+            	break;
             }
             if (columns[i].contains("PRIMARY")) {
                 //设置主键
