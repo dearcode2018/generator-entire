@@ -17,11 +17,11 @@ import java.util.Deque;
  * @author Mark sunlightcs@gmail.com
  */
 public class DynamicContextHolder {
-    @SuppressWarnings("unchecked")
-    private static final ThreadLocal<Deque<String>> CONTEXT_HOLDER = new ThreadLocal() {
+	
+    private static final ThreadLocal<Deque<String>> CONTEXT_HOLDER = new ThreadLocal<Deque<String>>() {
         @Override
-        protected Object initialValue() {
-            return new ArrayDeque();
+        protected Deque<String> initialValue() {
+            return new ArrayDeque<>();
         }
     };
 

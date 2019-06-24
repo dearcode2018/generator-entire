@@ -5,25 +5,59 @@ import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import ${mainPath}.common.utils.PageUtils;
-import ${mainPath}.common.utils.Query;
-
+import ${mainPath}.common.util.PageUtils;
+import ${mainPath}.common.util.Query;
+import ${mainPath}.datasource.annotation.DataSource;
 import ${package}.${moduleName}.dao.${className}Dao;
 import ${package}.${moduleName}.entity.${className}Entity;
 import ${package}.${moduleName}.service.${className}Service;
 
 
 @Service("${classname}Service")
+//@DataSource("x")
 public class ${className}ServiceImpl extends ServiceImpl<${className}Dao, ${className}Entity> implements ${className}Service {
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
-        IPage<${className}Entity> page = this.page(
+       /* IPage<${className}Entity> page = this.page(
                 new Query<${className}Entity>().getPage(params),
                 new QueryWrapper<${className}Entity>()
-        );
+        ); */
+
+    	final QueryWrapper<${className}Entity> wrapper = new QueryWrapper<>();
+    	final String value = params.get("key").toString();
+    	// 模糊查询指定字段
+    	wrapper.like("field1", value).or().like("field2", value);
+    	
+        final IPage<${className}Entity> page = this.page(new Query<${className}Entity>().getPage(params), wrapper);        
 
         return new PageUtils(page);
     }
+
+	/** 若使用其他数据源(非默认数据源，则去掉该注释，并且修改@DataSource("x") 为指定的数据源)
+
+    @Override
+    public ${className}Entity getById(Serializable id) {
+        return baseMapper.selectById(id);
+    }
+
+
+    @Override
+    public boolean removeByIds(Collection<? extends Serializable> idList) {
+        return SqlHelper.delBool(baseMapper.deleteBatchIds(idList));
+    }
+    
+    @Override
+    public boolean save(${className}Entity entity) {
+        return retBool(baseMapper.insert(entity));
+    }
+    
+    @Override
+    public boolean updateById(${className}Entity entity) {
+        return retBool(baseMapper.updateById(entity));
+    }
+	
+	*/   
+    
 
 }

@@ -9,8 +9,8 @@
 package com.hua.datasource.aspect;
 
 
-import com.hua.datasource.annotation.DataSource;
-import com.hua.datasource.config.DynamicContextHolder;
+import java.lang.reflect.Method;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,7 +22,8 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Method;
+import com.hua.datasource.annotation.DataSource;
+import com.hua.datasource.config.DynamicContextHolder;
 
 /**
  * 多数据源，切面处理类
@@ -35,8 +36,9 @@ import java.lang.reflect.Method;
 public class DataSourceAspect {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("@annotation(com.hua.datasource.annotation.DataSource) " +
-            "|| @within(com.hua.datasource.annotation.DataSource)")
+    @Pointcut("@annotation(com.wehotel.datasource.annotation.DataSource) " +
+            "|| @within(com.wehotel.datasource.annotation.DataSource) " + 
+    		"|| execution (* com.wehotel.modules.*.service.impl.*.*(..))")
     public void dataSourcePointCut() {
 
     }
@@ -44,16 +46,17 @@ public class DataSourceAspect {
     @Around("dataSourcePointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         MethodSignature signature = (MethodSignature) point.getSignature();
-        Class targetClass = point.getTarget().getClass();
+        Class<?> targetClass = point.getTarget().getClass();
         Method method = signature.getMethod();
 
-        DataSource targetDataSource = (DataSource)targetClass.getAnnotation(DataSource.class);
+        DataSource targetDataSource = targetClass.getAnnotation(DataSource.class);
         DataSource methodDataSource = method.getAnnotation(DataSource.class);
-        if(targetDataSource != null || methodDataSource != null){
+        if(targetDataSource != null || methodDataSource != null) {
             String value;
             if(methodDataSource != null){
+            	// 方法级的注解优先
                 value = methodDataSource.value();
-            }else {
+            }else { // 使用类级注解
                 value = targetDataSource.value();
             }
 

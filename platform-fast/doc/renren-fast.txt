@@ -43,3 +43,19 @@ java代码拷贝到 io.renren.modules 包下，main/resources/mapper/*放到reso
 8) 启动
 启动服务端: renren-fast
 启动前端: renren-fast-vue (npm run dev)
+
+
+
+
+前端
+1) 指定服务地址
+路径: $FRONT_HOME/static/config/index.js
+  // api接口请求地址
+  window.SITE_CONFIG['baseUrl'] = 'http://localhost:8080/renren-fast';
+
+
+
+
+
+
+

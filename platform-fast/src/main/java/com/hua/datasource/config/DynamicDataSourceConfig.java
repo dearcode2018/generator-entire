@@ -8,17 +8,18 @@
 
 package com.hua.datasource.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import com.hua.datasource.properties.DataSourceProperties;
-import com.hua.datasource.properties.DynamicDataSourceProperties;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.alibaba.druid.pool.DruidDataSource;
+import com.hua.datasource.properties.DataSourceProperties;
+import com.hua.datasource.properties.DynamicDataSourceProperties;
 
 /**
  * 配置多数据源
@@ -31,6 +32,12 @@ public class DynamicDataSourceConfig {
     @Autowired
     private DynamicDataSourceProperties properties;
 
+    /**
+     * 
+     * @description 默认数据源
+     * @return
+     * @author qianye.zheng
+     */
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.druid")
     public DataSourceProperties dataSourceProperties() {
