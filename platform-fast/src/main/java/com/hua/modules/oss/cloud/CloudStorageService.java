@@ -8,8 +8,9 @@
 
 package com.hua.modules.oss.cloud;
 
-import com.hua.common.utils.DateUtils;
 import org.apache.commons.lang.StringUtils;
+
+import com.hua.common.util.DateUtils;
 
 import java.io.InputStream;
 import java.util.Date;

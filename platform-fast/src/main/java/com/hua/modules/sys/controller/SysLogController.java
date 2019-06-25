@@ -8,8 +8,8 @@
 
 package com.hua.modules.sys.controller;
 
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.R;
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.R;
 import com.hua.modules.sys.service.SysLogService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;

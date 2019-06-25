@@ -9,9 +9,9 @@
 package com.hua.modules.oss.cloud;
 
 
-import com.hua.common.utils.ConfigConstant;
-import com.hua.common.utils.Constant;
-import com.hua.common.utils.SpringContextUtils;
+import com.hua.common.util.ConfigConstant;
+import com.hua.common.util.Constant;
+import com.hua.common.util.SpringContextUtils;
 import com.hua.modules.sys.service.SysConfigService;
 
 /**

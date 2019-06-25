@@ -9,7 +9,7 @@
 package com.hua.modules.oss.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hua.common.utils.PageUtils;
+import com.hua.common.util.PageUtils;
 import com.hua.modules.oss.entity.SysOssEntity;
 
 import java.util.Map;

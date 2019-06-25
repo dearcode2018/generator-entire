@@ -1,6 +1,6 @@
 package com.hua;
 
-import com.hua.common.utils.RedisUtils;
+import com.hua.common.util.RedisUtils;
 import com.hua.modules.sys.entity.SysUserEntity;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.junit.Test;

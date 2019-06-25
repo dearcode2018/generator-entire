@@ -8,7 +8,7 @@
 
 package com.hua.modules.sys.service.impl;
 
-import com.hua.common.utils.Constant;
+import com.hua.common.util.Constant;
 import com.hua.modules.sys.dao.SysMenuDao;
 import com.hua.modules.sys.dao.SysUserDao;
 import com.hua.modules.sys.dao.SysUserTokenDao;

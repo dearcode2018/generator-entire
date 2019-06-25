@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.hua.common.utils;
+package com.hua.common.util;
 
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -36,9 +36,8 @@ import com.hua.datasource.config.DynamicContextHolder;
 public class DataSourceAspect {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Pointcut("@annotation(com.wehotel.datasource.annotation.DataSource) " +
-            "|| @within(com.wehotel.datasource.annotation.DataSource) " + 
-    		"|| execution (* com.wehotel.modules.*.service.impl.*.*(..))")
+    @Pointcut("@annotation(com.hua.datasource.annotation.DataSource) " +
+            "|| @within(com.hua.datasource.annotation.DataSource) ")
     public void dataSourcePointCut() {
 
     }

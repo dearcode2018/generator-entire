@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hua.modules.generator.entity.CityEntity;
 import com.hua.modules.generator.service.CityService;
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.R;
-
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.R;
 
 
 /**
  * 城市表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-06-06 14:33:51
+ * @author qianye.zheng
+ * @email dearcode2019@qq.com
+ * @date 2019-06-25 19:49:31
  */
 @RestController
 @RequestMapping("generator/city")
@@ -48,7 +47,7 @@ public class CityController {
      */
     @RequestMapping("/info/{id}")
     @RequiresPermissions("generator:city:info")
-    public R info(@PathVariable("id") String id){
+    public R info(@PathVariable("id") Integer id){
 		CityEntity city = cityService.getById(id);
 
         return R.ok().put("city", city);
@@ -81,7 +80,7 @@ public class CityController {
      */
     @RequestMapping("/delete")
     @RequiresPermissions("generator:city:delete")
-    public R delete(@RequestBody String[] ids){
+    public R delete(@RequestBody Integer[] ids){
 		cityService.removeByIds(Arrays.asList(ids));
 
         return R.ok();

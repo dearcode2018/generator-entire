@@ -8,7 +8,7 @@
 
 package com.hua.modules.job.utils;
 
-import com.hua.common.utils.SpringContextUtils;
+import com.hua.common.util.SpringContextUtils;
 import com.hua.modules.job.entity.ScheduleJobEntity;
 import com.hua.modules.job.entity.ScheduleJobLogEntity;
 import com.hua.modules.job.service.ScheduleJobLogService;

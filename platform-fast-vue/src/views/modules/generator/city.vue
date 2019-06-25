@@ -23,6 +23,12 @@
         width="50">
       </el-table-column>
       <el-table-column
+        prop="id"
+        header-align="center"
+        align="center"
+        label="主键">
+      </el-table-column>
+      <el-table-column
         prop="name"
         header-align="center"
         align="center"
@@ -37,7 +43,7 @@
       <el-table-column
         prop="fullname"
         header-align="center"
-        align="center"
+        align="center" width="200"
         label="全称">
       </el-table-column>
       <el-table-column
@@ -51,6 +57,32 @@
         header-align="center"
         align="center"
         label="邮政编码">
+      </el-table-column>
+      <el-table-column
+        prop="status"
+        header-align="center"
+        align="center"
+        label="状态">
+      <template slot-scope="scope">
+        <!-- 随便你自定义，通过（scope.row）拿到当前行数据-->
+		<div v-if="scope.row.status==1">有效</div>
+		<div v-else-if="scope.row.status==0">无效</div>		
+		<div v-else>未知</div>				
+      </template>		
+      </el-table-column>
+      <el-table-column
+        prop="type"
+        header-align="center"
+        align="center"
+        label="类型">
+      <template slot-scope="scope">
+        <!-- 随便你自定义，通过（scope.row）拿到当前行数据-->
+		<div v-if="scope.row.type==1">直辖市</div>
+		<div v-else-if="scope.row.type==2">首府</div>
+		<div v-else-if="scope.row.type==3">地级市</div>		
+		<div v-else-if="scope.row.type==4">县级市</div>				
+		<div v-else>未知</div>				
+      </template>			
       </el-table-column>
       <el-table-column
         fixed="right"
@@ -123,7 +155,7 @@
           }
           this.dataListLoading = false
         })
-      },
+      },  
       // 每页数
       sizeChangeHandle (val) {
         this.pageSize = val
@@ -176,6 +208,34 @@
           })
         })
       }
-    }
+    },
+	// 地理位置
+	geography(array) {
+		var result = "";
+		array.forEach(item => {
+			if (1 == item)
+			{
+				result += "平原";
+			} else if (2 == item)
+			{
+				result += "丘陵";
+			} else if (3 == item)
+			{
+				result += "多山";
+			} else if (4 == item)
+			{
+				result += "高原";
+			} else if (5 == item)
+			{
+				result += "盆地";
+			}
+		});
+
+		return result;
+	}
+  }
+  
+  function a() {
+	return "啊"
   }
 </script>

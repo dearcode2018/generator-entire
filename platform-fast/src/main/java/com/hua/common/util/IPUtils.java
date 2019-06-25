@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.hua.common.utils;
+package com.hua.common.util;
 
 import com.alibaba.druid.util.StringUtils;
 import org.slf4j.Logger;

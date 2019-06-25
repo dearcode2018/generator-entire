@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.hua.common.utils;
+package com.hua.common.util;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

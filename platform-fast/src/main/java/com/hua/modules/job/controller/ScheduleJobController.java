@@ -9,8 +9,8 @@
 package com.hua.modules.job.controller;
 
 import com.hua.common.annotation.SysLog;
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.R;
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.R;
 import com.hua.common.validator.ValidatorUtils;
 import com.hua.modules.job.entity.ScheduleJobEntity;
 import com.hua.modules.job.service.ScheduleJobService;

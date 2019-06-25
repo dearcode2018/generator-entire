@@ -10,10 +10,10 @@ package com.hua.modules.oss.controller;
 
 import com.google.gson.Gson;
 import com.hua.common.exception.RRException;
-import com.hua.common.utils.ConfigConstant;
-import com.hua.common.utils.Constant;
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.R;
+import com.hua.common.util.ConfigConstant;
+import com.hua.common.util.Constant;
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.R;
 import com.hua.common.validator.ValidatorUtils;
 import com.hua.common.validator.group.AliyunGroup;
 import com.hua.common.validator.group.QcloudGroup;

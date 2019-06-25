@@ -9,7 +9,7 @@
 package com.hua.modules.job.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hua.common.utils.PageUtils;
+import com.hua.common.util.PageUtils;
 import com.hua.modules.job.entity.ScheduleJobEntity;
 
 import java.util.Map;

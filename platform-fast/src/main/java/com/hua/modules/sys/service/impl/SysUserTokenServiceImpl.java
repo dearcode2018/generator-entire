@@ -9,7 +9,7 @@
 package com.hua.modules.sys.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hua.common.utils.R;
+import com.hua.common.util.R;
 import com.hua.modules.sys.dao.SysUserTokenDao;
 import com.hua.modules.sys.entity.SysUserTokenEntity;
 import com.hua.modules.sys.oauth2.TokenGenerator;

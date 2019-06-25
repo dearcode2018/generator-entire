@@ -9,9 +9,9 @@
 package com.hua.modules.sys.controller;
 
 import com.hua.common.annotation.SysLog;
-import com.hua.common.utils.Constant;
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.R;
+import com.hua.common.util.Constant;
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.R;
 import com.hua.common.validator.ValidatorUtils;
 import com.hua.modules.sys.entity.SysRoleEntity;
 import com.hua.modules.sys.service.SysRoleMenuService;

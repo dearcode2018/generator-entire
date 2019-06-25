@@ -11,6 +11,9 @@
         <result property="fullname" column="fullName"/>
         <result property="province" column="province"/>
         <result property="postalcode" column="postalCode"/>
+        <result property="status" column="STATUS"/>
+        <result property="geography" column="GEOGRAPHY"/>
+        <result property="type" column="TYPE"/>
     </resultMap>
 
 

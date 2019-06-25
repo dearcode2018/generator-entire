@@ -8,8 +8,8 @@
 
 package com.hua.modules.job.controller;
 
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.R;
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.R;
 import com.hua.modules.job.entity.ScheduleJobLogEntity;
 import com.hua.modules.job.service.ScheduleJobLogService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;

@@ -10,8 +10,8 @@ package com.hua.modules.oss.service.impl;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hua.common.utils.PageUtils;
-import com.hua.common.utils.Query;
+import com.hua.common.util.PageUtils;
+import com.hua.common.util.Query;
 import com.hua.modules.oss.dao.SysOssDao;
 import com.hua.modules.oss.entity.SysOssEntity;
 import com.hua.modules.oss.service.SysOssService;

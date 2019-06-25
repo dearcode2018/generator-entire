@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.hua.common.utils;
+package com.hua.common.util;
 
 /**
  * 系统参数相关Key

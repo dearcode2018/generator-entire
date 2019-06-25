@@ -9,8 +9,8 @@
 package com.hua.modules.sys.redis;
 
 
-import com.hua.common.utils.RedisKeys;
-import com.hua.common.utils.RedisUtils;
+import com.hua.common.util.RedisKeys;
+import com.hua.common.util.RedisUtils;
 import com.hua.modules.sys.entity.SysConfigEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.hua.common.utils;
+package com.hua.common.util;
 
 import com.hua.common.exception.RRException;
 import com.hua.modules.sys.entity.SysUserEntity;

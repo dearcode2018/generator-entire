@@ -9,7 +9,7 @@
 package com.hua.modules.app.controller;
 
 
-import com.hua.common.utils.R;
+import com.hua.common.util.R;
 import com.hua.common.validator.ValidatorUtils;
 import com.hua.modules.app.entity.UserEntity;
 import com.hua.modules.app.form.RegisterForm;

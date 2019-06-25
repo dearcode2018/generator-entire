@@ -8,7 +8,7 @@
 
 package com.hua.modules.sys.controller;
 
-import com.hua.common.utils.R;
+import com.hua.common.util.R;
 import com.hua.modules.sys.entity.SysUserEntity;
 import com.hua.modules.sys.form.SysLoginForm;
 import com.hua.modules.sys.service.SysCaptchaService;

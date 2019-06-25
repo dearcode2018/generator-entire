@@ -9,8 +9,9 @@
 package com.hua.modules.sys.oauth2;
 
 import com.google.gson.Gson;
-import com.hua.common.utils.HttpContextUtils;
-import com.hua.common.utils.R;
+import com.hua.common.util.HttpContextUtils;
+import com.hua.common.util.R;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.HttpStatus;
 import org.apache.shiro.authc.AuthenticationException;

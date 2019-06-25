@@ -9,7 +9,7 @@
 package com.hua.modules.job.utils;
 
 import com.hua.common.exception.RRException;
-import com.hua.common.utils.Constant;
+import com.hua.common.util.Constant;
 import com.hua.modules.job.entity.ScheduleJobEntity;
 import org.quartz.*;
 

@@ -9,7 +9,7 @@
 package com.hua.modules.app.controller;
 
 
-import com.hua.common.utils.R;
+import com.hua.common.util.R;
 import com.hua.modules.app.annotation.Login;
 import com.hua.modules.app.annotation.LoginUser;
 import com.hua.modules.app.entity.UserEntity;

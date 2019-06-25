@@ -56,6 +56,17 @@ java代码拷贝到 io.renren.modules 包下，main/resources/mapper/*放到reso
 
 
 
-
-
+1.列表-枚举类型显示
+      <el-table-column
+        prop="status"
+        header-align="center"
+        align="center"
+        label="状态">
+      <template slot-scope="scope">
+        <!-- 随便你自定义，通过（scope.row）拿到当前行数据-->
+		<div v-if="scope.row.status==1">有效</div>
+		<div v-else-if="scope.row.status==0">无效</div>		
+		<div v-else>未知</div>				
+      </template>		
+      </el-table-column>
 

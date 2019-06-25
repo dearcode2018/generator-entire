@@ -1,8 +1,8 @@
 //package com.hua.config;
 //
 //import com.google.gson.Gson;
-//import com.hua.common.utils.HttpContextUtils;
-//import com.hua.common.utils.R;
+//import com.hua.common.util.HttpContextUtils;
+//import com.hua.common.util.R;
 //import org.apache.http.HttpStatus;
 //import org.springframework.boot.web.servlet.FilterRegistrationBean;
 //import org.springframework.context.annotation.Bean;

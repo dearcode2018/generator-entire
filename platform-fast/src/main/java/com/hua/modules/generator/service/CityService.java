@@ -1,7 +1,7 @@
 package com.hua.modules.generator.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hua.common.utils.PageUtils;
+import com.hua.common.util.PageUtils;
 import com.hua.modules.generator.entity.CityEntity;
 
 import java.util.Map;
@@ -9,9 +9,9 @@ import java.util.Map;
 /**
  * 城市表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-06-06 14:33:51
+ * @author qianye.zheng
+ * @email dearcode2019@qq.com
+ * @date 2019-06-25 19:49:31
  */
 public interface CityService extends IService<CityEntity> {
 

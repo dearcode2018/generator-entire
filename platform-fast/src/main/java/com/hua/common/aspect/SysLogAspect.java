@@ -10,8 +10,8 @@ package com.hua.common.aspect;
 
 import com.google.gson.Gson;
 import com.hua.common.annotation.SysLog;
-import com.hua.common.utils.HttpContextUtils;
-import com.hua.common.utils.IPUtils;
+import com.hua.common.util.HttpContextUtils;
+import com.hua.common.util.IPUtils;
 import com.hua.modules.sys.entity.SysLogEntity;
 import com.hua.modules.sys.entity.SysUserEntity;
 import com.hua.modules.sys.service.SysLogService;

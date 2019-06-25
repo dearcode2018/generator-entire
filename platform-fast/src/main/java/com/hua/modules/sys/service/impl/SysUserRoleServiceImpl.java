@@ -9,7 +9,7 @@
 package com.hua.modules.sys.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hua.common.utils.MapUtils;
+import com.hua.common.util.MapUtils;
 import com.hua.modules.sys.dao.SysUserRoleDao;
 import com.hua.modules.sys.entity.SysUserRoleEntity;
 import com.hua.modules.sys.service.SysUserRoleService;

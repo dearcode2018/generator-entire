@@ -10,8 +10,8 @@ package com.hua.modules.sys.controller;
 
 import com.hua.common.annotation.SysLog;
 import com.hua.common.exception.RRException;
-import com.hua.common.utils.Constant;
-import com.hua.common.utils.R;
+import com.hua.common.util.Constant;
+import com.hua.common.util.R;
 import com.hua.modules.sys.entity.SysMenuEntity;
 import com.hua.modules.sys.service.ShiroService;
 import com.hua.modules.sys.service.SysMenuService;
