@@ -2,13 +2,28 @@
   <div class="mod-config">
     <el-form :inline="true" :model="dataForm" @keyup.enter.native="getDataList()">
       <el-form-item>
-        <el-input v-model="dataForm.key" placeholder="参数名" clearable></el-input>
+        <el-input v-model="dataForm.key" placeholder="参数名" @input="getDataList()" clearable></el-input>		
       </el-form-item>
       <el-form-item>
-        <el-button @click="getDataList()">查询</el-button>
+        <el-button @click="getDataList()" type="info">查询</el-button>
         <el-button v-if="isAuth('generator:city:save')" type="primary" @click="addOrUpdateHandle()">新增</el-button>
         <el-button v-if="isAuth('generator:city:delete')" type="danger" @click="deleteHandle()" :disabled="dataListSelections.length <= 0">批量删除</el-button>
       </el-form-item>
+		<!-- @input 监听 输入框、下拉框的变化，调用搜索方法刷新视图即可 -->
+		<el-select v-model="dataForm.type" placeholder="请选择" @input="getDataList()">
+			<!--参数为空不用定义 -->			
+			<el-option label="类型" />			
+			<el-option value="1" label="直辖市" />
+			<el-option value="2" label="首府" />	
+			<el-option value="3" label="地级市" />			
+			<el-option value="4" label="县级市" />							
+		</el-select>	
+		<el-select v-model="dataForm.status" placeholder="请选择" @input="getDataList()">
+			<!--参数为空不用定义 -->		
+			<el-option label="状态" />	
+			<el-option value="1" label="有效" />
+			<el-option value="0" label="无效" />						
+		</el-select>		  
     </el-form>
     <el-table
       :data="dataList"
@@ -143,7 +158,9 @@
           params: this.$http.adornParams({
             'page': this.pageIndex,
             'limit': this.pageSize,
-            'key': this.dataForm.key
+            'key': this.dataForm.key,
+			'status': this.dataForm.status,
+			'type': this.dataForm.type 
           })
         }).then(({data}) => {
           if (data && data.code === 0) {

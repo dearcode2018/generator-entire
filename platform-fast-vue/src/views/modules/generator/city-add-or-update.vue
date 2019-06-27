@@ -65,9 +65,9 @@
 		  // 数字不用能单引号包围，否则无法识别该值
           status: 1,
 		  // 复选框需要声明为数组类型，否则将出现勾选一个出现全部勾选
-		  // 出现的值等于对应的lable则选中
+		  //  出现的值等于对应的lable则选中
           geography: ['2'],
-		  // 要用单引号包围
+		   // 要用单引号包围
           type: '3'
         },
         dataRule: {
@@ -119,7 +119,7 @@
                 this.dataForm.status = data.city.status
 				// 拆分为字符串数组即可自动勾选选项(数据库存储的是逗号隔开的)
                 this.dataForm.geography = data.city.geography.split(',')
-				// 变为字符串，页面自动选择下拉框选项
+				 //  变为字符串，页面自动选择下拉框选项
                 this.dataForm.type = data.city.type + ''
               }
             })
@@ -141,7 +141,7 @@
                 'province': this.dataForm.province,
                 'postalcode': this.dataForm.postalcode,
                 'status': this.dataForm.status,
-				// 用逗号将数组元素拼接成一个字符串
+				 // 用逗号将数组元素拼接成一个字符串
                 'geography': this.dataForm.geography.join(','),
                 'type': this.dataForm.type
               })

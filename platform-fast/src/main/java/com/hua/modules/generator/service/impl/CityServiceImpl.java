@@ -21,10 +21,16 @@ public class CityServiceImpl extends ServiceImpl<CityDao, CityEntity> implements
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
     	QueryWrapper<CityEntity> wrapper = new QueryWrapper<>();
-    	final String value = params.get("key").toString();
-    	wrapper.like("name", value).or().like("shortName", value)
-    	.or().like("fullName", value).or().like("province", value)
-    	.or().like("postalCode", value);
+    	final Object value = params.get("key");
+    	// and (多个 OR ) and (多个 OR)
+    	wrapper.and((x) -> x.like("name", value).or().like("shortName", value)
+    	    	.or().like("fullName", value).or().like("province", value)
+    	    	.or().like("postalCode", value));
+    	
+    	// 第一个参数true表示将后者加入查询条件，false后者条件无效
+    	wrapper.and(null != params.get("status"), (x) ->x.eq("status", params.get("status")));
+    	// 表示非空才执行，避免传null值无法匹配
+    	wrapper.and(null != params.get("type"), (x) ->x.eq("type", params.get("type")));
     	
         IPage<CityEntity> page = this.page(new Query<CityEntity>().getPage(params), wrapper);
         
