@@ -10,6 +10,9 @@ package com.hua.modules.oss.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.hua.transform.DateTimeSerializer;
+
 import lombok.Data;
 
 import java.io.Serializable;
@@ -30,7 +33,9 @@ public class SysOssEntity implements Serializable {
 	private Long id;
 	//URL地址
 	private String url;
+	
 	//创建时间
+	@JsonSerialize(using = DateTimeSerializer.class)
 	private Date createDate;
 
 }

@@ -11,7 +11,7 @@ import ${mainPath}.datasource.annotation.DataSource;
 import ${package}.${moduleName}.dao.${className}Dao;
 import ${package}.${moduleName}.entity.${className}Entity;
 import ${package}.${moduleName}.service.${className}Service;
-
+import ${mainPath}.util.SqlUtil;
 
 @Service("${classname}Service")
 //@DataSource("x")
@@ -25,12 +25,12 @@ public class ${className}ServiceImpl extends ServiceImpl<${className}Dao, ${clas
         ); */
 
     	final QueryWrapper<${className}Entity> wrapper = new QueryWrapper<>();
-    	final Object value = params.get("key");
+ 		final String value = params.get("key").toString();
     	// 模糊查询指定字段
     	// and (多个 OR ) and (多个 OR)
     	wrapper.and((x) -> x.like("field1", value).or().like("field2", value));
     	// 第一个参数true表示将后者加入查询条件，false后者条件无效
-    	//wrapper.and(null != params.get("status"), (x) ->x.eq("status", params.get("status")));
+    	// wrapper.and((x) -> x.like("field1", SqlUtil.bothLike(value)).or().like("field2", SqlUtil.bothLike(value)));
     	// 表示非空才执行，避免传null值无法匹配
     	//wrapper.and(null != params.get("type"), (x) ->x.eq("type", params.get("type")));    	
     	

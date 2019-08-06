@@ -11,8 +11,11 @@ package com.hua.modules.sys.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.hua.common.validator.group.AddGroup;
 import com.hua.common.validator.group.UpdateGroup;
+import com.hua.transform.DateTimeSerializer;
+
 import lombok.Data;
 
 import javax.validation.constraints.Email;
@@ -85,6 +88,7 @@ public class SysUserEntity implements Serializable {
 	/**
 	 * 创建时间
 	 */
+	@JsonSerialize(using = DateTimeSerializer.class)
 	private Date createTime;
 
 }

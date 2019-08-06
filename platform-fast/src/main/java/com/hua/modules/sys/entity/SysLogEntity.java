@@ -10,6 +10,9 @@ package com.hua.modules.sys.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.hua.transform.DateTimeSerializer;
+
 import lombok.Data;
 
 import java.io.Serializable;
@@ -39,7 +42,9 @@ public class SysLogEntity implements Serializable {
 	private Long time;
 	//IP地址
 	private String ip;
+	
 	//创建时间
+	@JsonSerialize(using = DateTimeSerializer.class)
 	private Date createDate;
 
 }

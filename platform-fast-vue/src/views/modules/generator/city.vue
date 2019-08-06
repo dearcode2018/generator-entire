@@ -79,7 +79,7 @@
         align="center"
         label="状态">
       <template slot-scope="scope">
-        <!-- 随便你自定义，通过（scope.row）拿到当前行数据-->
+        <!-- 通过（scope.row）拿到当前行数据-->
 		<div v-if="scope.row.status==1">有效</div>
 		<div v-else-if="scope.row.status==0">无效</div>		
 		<div v-else>未知</div>				
@@ -91,7 +91,7 @@
         align="center"
         label="类型">
       <template slot-scope="scope">
-        <!-- 随便你自定义，通过（scope.row）拿到当前行数据-->
+        <!-- 通过（scope.row）拿到当前行数据-->
 		<div v-if="scope.row.type==1">直辖市</div>
 		<div v-else-if="scope.row.type==2">首府</div>
 		<div v-else-if="scope.row.type==3">地级市</div>		

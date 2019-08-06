@@ -39,6 +39,8 @@
 		<hutool.version>4.1.1</hutool.version>
 		<lombok.version>1.18.6</lombok.version>
 		<common.version>0.0.1</common.version>
+		<xstream.version>1.4.10</xstream.version>
+
 
 		<!--wagon plugin 配置-->
 		<service-path>/work/renren</service-path>
@@ -225,6 +227,12 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
+	
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>${xstream.version}</version>
+		</dependency>	
 	
 		<dependency>
 			<groupId>com.hua</groupId>

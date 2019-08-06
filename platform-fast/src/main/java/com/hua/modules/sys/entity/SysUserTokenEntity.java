@@ -11,6 +11,9 @@ package com.hua.modules.sys.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.hua.transform.DateTimeSerializer;
+
 import lombok.Data;
 
 import java.io.Serializable;
@@ -32,9 +35,13 @@ public class SysUserTokenEntity implements Serializable {
 	private Long userId;
 	//token
 	private String token;
+	
 	//过期时间
+	@JsonSerialize(using = DateTimeSerializer.class)
 	private Date expireTime;
+	
 	//更新时间
+	@JsonSerialize(using = DateTimeSerializer.class)
 	private Date updateTime;
 
 }

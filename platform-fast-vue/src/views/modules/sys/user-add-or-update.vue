@@ -97,7 +97,7 @@
             { validator: validateComfirmPassword, trigger: 'blur' }
           ],
           email: [
-            { required: true, message: '邮箱不能为空', trigger: 'blur' },
+            { required: false, message: '邮箱不能为空', trigger: 'blur' },
             { validator: validateEmail, trigger: 'blur' }
           ],
           mobile: [

@@ -8,12 +8,15 @@
 
 package com.hua.modules.app.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Date;
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.hua.transform.DateTimeSerializer;
+
+import lombok.Data;
 
 
 /**
@@ -46,6 +49,7 @@ public class UserEntity implements Serializable {
 	/**
 	 * 创建时间
 	 */
+	@JsonSerialize(using = DateTimeSerializer.class)
 	private Date createTime;
 
 }

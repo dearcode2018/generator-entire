@@ -70,3 +70,15 @@ java代码拷贝到 io.renren.modules 包下，main/resources/mapper/*放到reso
       </template>		
       </el-table-column>
 
+	2.日期时间控件
+    <el-form-item label="失效时间" prop="expireDt">
+		<el-date-picker
+				v-model="dataForm.expireDt"
+				type="datetime"
+				format="yyyy-MM-dd hh:mm:ss"
+				value-format="yyyy-MM-dd hh:mm:ss"
+				placeholder="选择时间">
+		</el-date-picker>		
+    </el-form-item>
+
+
