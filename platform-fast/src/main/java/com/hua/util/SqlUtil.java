@@ -43,6 +43,13 @@ public final class SqlUtil
 		{
 			content = content.replace("%", "\\%");
 		}
+		
+		// 单引号
+		if (content.contains("'"))
+		{
+			content = content.replace("'", "\'");
+		}
+		
 
 		return content;
 	}
