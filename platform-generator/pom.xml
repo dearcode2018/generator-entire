@@ -29,7 +29,7 @@
 		<mssql.version>4.0</mssql.version>
 		<oracle.version>11.2.0.3</oracle.version>
 		<common.version>0.0.1</common.version>	
-		<commons-configuration2.version>2.4</commons-configuration2.version>		
+		<commons-configuration2.version>2.7</commons-configuration2.version>		
 	</properties>
 
 	<dependencies>
