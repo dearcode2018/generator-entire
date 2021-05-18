@@ -39,7 +39,7 @@
 		<hutool.version>4.1.1</hutool.version>
 		<lombok.version>1.18.6</lombok.version>
 		<common.version>0.0.1</common.version>
-		<xstream.version>1.4.10</xstream.version>
+		<xstream.version>1.4.17</xstream.version>
 
 
 		<!--wagon plugin 配置-->
